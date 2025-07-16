@@ -15,9 +15,9 @@ func home(w http.ResponseWriter, r *http.Request) {
 	// to note that the file containing our base template must be the *first*
 	// file in the slice.
 	files := []string{
-		"../../ui/html/base.tmpl",
-		"../../ui/html/pages/home.tmpl",
-		"../../ui/html/partials/nav.tmpl",
+		"./ui/html/base.tmpl",
+		"./ui/html/pages/home.tmpl",
+		"./ui/html/partials/nav.tmpl",
 	}
 
 	// Use the template.ParseFiles() function to read the files and store the
@@ -71,4 +71,8 @@ func snippetCreatePost(w http.ResponseWriter, r *http.Request) {
 // 		return
 // 	}
 // 	w.Write([]byte("Category not found, specify a category of type 'code'."))
+// }
+
+// func downloadHandler(w http.ResponseWriter, r *http.Request) {
+// 	http.ServeFile(w, r, "./ui/static/file.zip")
 // }
