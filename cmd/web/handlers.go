@@ -9,7 +9,6 @@ import (
 )
 
 func (app *application) home(w http.ResponseWriter, r *http.Request) {
-	panic("oops! something went wrong") // Deliberate panic
 
 	snippets, err := app.snippets.Latest()
 	if err != nil {
